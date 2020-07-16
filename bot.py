@@ -2,7 +2,6 @@ import discord
 import asyncio
 from random import randint, choice
 from discord.utils import get
-import db
 from selenium import webdriver
 from discord.ext import commands
 import json
@@ -10,7 +9,7 @@ import requests
 from discord.ext.commands import Bot
 
 des = "Someone's gotta clean up those drugs."
-pref = "!"
+pref = "."
 client = discord.Client()
 bot = commands.Bot(description=des, command_prefix=pref)
 url = 'https://randomall.ru/api/custom/gen/758/'
@@ -47,18 +46,18 @@ async def info(ctx):
     emb = discord.Embed(title='Info about BUNKER GAME', color=0x39d0d6)
     emb.set_author(name='Bunker-BOT')
     emb.set_thumbnail(url='https://static.mk.ru/upload/entities/2020/03/24/15/articles/detailPicture/6f/d3/83/94/e1e1b343624f272a58ab25f49576761a.jpg')
-    emb.add_field(name='!send_location', value='Генерация локации')
-    emb.add_field(name='!send_all', value='Отправка карточек')
-    emb.add_field(name='!give_age', value='Новый возраст')
-    emb.add_field(name='!give_baggage', value='Новый багаж')
-    emb.add_field(name='!give_charact', value='Новая характеристика')
-    emb.add_field(name='!give_dopinfa', value='Новая доп.инфа')
-    emb.add_field(name='!give_gender', value='Новый пол')
-    emb.add_field(name='!give_health', value='Новое здоровье')
-    emb.add_field(name='!give_hobby', value='Новое хобби')
-    emb.add_field(name='!give_phobia', value='Новая фобия')
-    emb.add_field(name='!give_plod', value='Новая способность к детерождению')
-    emb.add_field(name='!give_prof', value='Новая профессия')
+    emb.add_field(name='.send_location', value='Генерация локации')
+    emb.add_field(name='.send_all', value='Отправка карточек')
+    emb.add_field(name='.give_age', value='Новый возраст')
+    emb.add_field(name='.give_baggage', value='Новый багаж')
+    emb.add_field(name='.give_charact', value='Новая характеристика')
+    emb.add_field(name='.give_dopinfa', value='Новая доп.инфа')
+    emb.add_field(name='.give_gender', value='Новый пол')
+    emb.add_field(name='.give_health', value='Новое здоровье')
+    emb.add_field(name='.give_hobby', value='Новое хобби')
+    emb.add_field(name='.give_phobia', value='Новая фобия')
+    emb.add_field(name='.give_plod', value='Новая способность к детерождению')
+    emb.add_field(name='.give_prof', value='Новая профессия')
 
     await ctx.send(embed=emb)
 
